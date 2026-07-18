@@ -39,7 +39,7 @@ local function spawnNear(o)
         type = "DeckCustom",
         position = { p.x + OFFSET[1], p.y + OFFSET[2], p.z + OFFSET[3] },
         rotation = { 0, 180, 0 },
-        scale = { 1, 1, 1 },
+        scale = { 1.25, 1, 1.25 },
         sound = false,
         callback_function = function(deckObj)
             deckObj.setCustomObject({ face = FACE, back = BACK, width = 3, height = 3, number = 9, back_is_hidden = true, unique_back = true })
