@@ -3,7 +3,7 @@
 -------------------------- THE ITEMS SPAWNER SCRIPT -------------------------------------------------------------
   [19]={
     (function()
-        local URL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/scripts/items_script.lua"
+        local URL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/scripts/items_script.lua?v=1"
 
         Wait.time(function()
             WebRequest.get(URL, function(r)
