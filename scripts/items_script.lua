@@ -1,7 +1,7 @@
 local TARGET_GUID = "dawnbringer-sheet"
 local DECK = "Dawnbringer Items Deck"
 local OFFSET = { -1.5, 1.2, 10.5 }
-local FACE = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/items-front.png?v=4"
+local FACE = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/items-front.png?v=5"
 local BACK = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/items-back.png"
 
 local S = [==[
