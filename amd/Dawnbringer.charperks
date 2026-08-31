@@ -1,0 +1,181 @@
+{
+  "cards": "- amd:\n  rolling: false\n  shuffle: false\n  copies: 3\n  - value: +0\n  - center:\n    - poison:\n- amd:\n  rolling: false\n  shuffle: false\n  copies: 2\n  - value: +1\n  - center:\n    - custom: \"Add +1 %attack% if you used a %arsenal% item this turn\"\n- amd:\n  rolling: false\n  shuffle: false\n  copies: 2\n  - value: +2\n- amd:\n  rolling: false\n  shuffle: false\n  copies: 3\n  - value: +1\n  - center:\n    - custom: \"Add +1 %attack% for each negative condition the target has\"\n- amd:\n  rolling: false\n  shuffle: false\n  copies: 2\n  - value: +0\n  - center:\n    - custom: \"%recover% one of your %arsenal% items\"\n- amd:\n  rolling: true\n  shuffle: false\n  copies: 5\n  - value: +1",
+  "reminders": "- namd:\n  title: \"Deep Pockets\"\n  duration:\n  lost: false\n  - custom: \"You may bring two %equip-body% items to each scenario if at least one of them has \\\"Cloak\\\", \\\"Robe\\\" or \\\"Cape\\\" in its name\"\n- namd:\n  title: \"Sharing is Caring\"\n  duration:\n  lost: true\n  - custom: \"Once each scenario, one adjacent ally may use one of your %arsenal% items during their turn without it becoming %lost%\"\n- namd:\n  title: \"Brief Respite\"\n  duration:\n  lost: false\n  - custom: \"During a long rest, you may %recover% one of your %arsenal% items\"",
+  "derivedFromPerks": "d457707a",
+  "cardColors": {
+    "title-background": {
+      "h": 304,
+      "s": 74,
+      "l": 30,
+      "a": 0.85,
+      "gradient": {
+        "angle": 0,
+        "stops": [
+          {
+            "h": 304,
+            "s": 74,
+            "l": 30,
+            "a": 0.85,
+            "position": 0.878168061023622
+          },
+          {
+            "h": 48,
+            "s": 75,
+            "l": 50,
+            "a": 0.65,
+            "position": 1
+          }
+        ]
+      }
+    },
+    "banners": {
+      "h": 244,
+      "s": 75,
+      "l": 33,
+      "a": 0.5
+    },
+    "background": {
+      "h": 202,
+      "s": 85,
+      "l": 29,
+      "a": 1
+    }
+  },
+  "cardBackColors": {
+    "class-icon": {
+      "h": 304,
+      "s": 74,
+      "l": 30,
+      "a": 0.85,
+      "gradient": {
+        "angle": 330,
+        "stops": [
+          {
+            "h": 304,
+            "s": 74,
+            "l": 30,
+            "a": 0.85,
+            "position": 0
+          },
+          {
+            "h": 48,
+            "s": 75,
+            "l": 50,
+            "a": 1,
+            "position": 0.899
+          }
+        ]
+      }
+    },
+    "banners": {
+      "h": 244,
+      "s": 75,
+      "l": 33,
+      "a": 0.5
+    },
+    "background": {
+      "h": 202,
+      "s": 85,
+      "l": 29,
+      "a": 1
+    }
+  },
+  "cardSubColor": null,
+  "cardBackDarkness": 0.38,
+  "cardLogoPlacement": {
+    "scale": 1,
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "cardBleed": false,
+  "className": "Dawnbringer",
+  "logoUrl": "",
+  "logoSourceUrl": "https://i.imgur.com/El75zQ8.png",
+  "logoScale": 1.45,
+  "customIcons": [
+    {
+      "id": "730b4994-4dbf-4b81-a606-be4090225dc2",
+      "name": "ammo",
+      "sourceUrl": "https://i.imgur.com/pq1hCB8.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": true
+    },
+    {
+      "id": "abfa2301-8ff4-42c4-a0a9-fdf2cc5c0bc2",
+      "name": "utility",
+      "sourceUrl": "https://i.imgur.com/cSV3Y9G.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "15cd7a64-3fd8-42e1-907e-17b87268e44a",
+      "name": "thrown",
+      "sourceUrl": "https://i.imgur.com/PkeOkSI.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "2395a16e-33aa-4cfc-98a6-6e6d73986ab1",
+      "name": "arsenal",
+      "sourceUrl": "https://storage.googleapis.com/download/storage/v1/b/gloomhaven/o/upload%2F6a2065b1be2242ada0cbeb30_0_classListIcon.png?generation=1780871162809399&alt=media",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "7da087b8-5ed9-423b-8fee-611c10d0e781",
+      "name": "ancientTech",
+      "sourceUrl": "https://i.imgur.com/HBNUnaY.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "935d7d53-986a-4ebc-ab99-ab68cfab432b",
+      "name": "volatileFlask",
+      "sourceUrl": "https://i.imgur.com/tVCg9Hw.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "e83db398-f634-42ad-844e-352af29f07d7",
+      "name": "caltrops",
+      "sourceUrl": "https://i.imgur.com/R5IeIio.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "eab24f5c-43f0-426a-8553-abfe6d03e9c1",
+      "name": "corrosiveDarts",
+      "sourceUrl": "https://i.imgur.com/QluRvuV.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "9cb03d06-8e26-459a-a28e-abc6e9c20dc0",
+      "name": "serratedBolt",
+      "sourceUrl": "https://i.imgur.com/HkD3HN4.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    },
+    {
+      "id": "94bdf651-ad66-4bdf-ab11-09bf63286a9e",
+      "name": "steelWire",
+      "sourceUrl": "https://i.imgur.com/bi7IKqY.png",
+      "imageUrl": "",
+      "scale": 1,
+      "conditionMode": false
+    }
+  ],
+  "edition": "gh2e",
+  "cardEdition": "gh2e",
+  "cardColorsLinked": true,
+  "perks": "- perk: Remove one %amd-minus-2% card\n- perk: Replace one %amd-minus-1% card with%lf% one %amd-plus-0%%poison% card\n  checks: 3\n- perk: Replace two %amd-plus-0% cards with%lf%one %amd-plus-1% \"Add +1 %attack% if you used%lf% a %arsenal% item this turn\" card\n  checks: 2\n- perk: Replace one %amd-plus-0% card with%lf% one %amd-plus-2%  card\n  checks: 2\n- perk: Replace three %amd-plus-1% cards with %lf%three %amd-plus-1%  \"Add +1 %attack% for each negative condition the%lf% target has\" cards\n- perk: Replace one %amd-plus-1% card with%lf% one %amd-plus-0% \" %recover% one of your %lf%%arsenal% items\" card\n  checks: 2\n# - perk: Add one %amd-plus-3% card\n- perk: Add two %amd-plus-1%%rolling% cards\n  checks: 2\n- perk: Ignore scenario effects and %lf%add one %amd-plus-1%%rolling% card\n- perk: You may bring two %equip-body% items %lf%to each scenario if at least%lf% one of them has \"Cloak\",%lf% \"Robe\" or \"Cape\" in its name\n- perk: Once each scenario, one %lf%adjacent ally may use one of%lf% your %arsenal% items during their%lf% turn without it becoming %lost%\n- perk2: During a long rest, you may %recover% one of your %arsenal% items\n\n"
+}
