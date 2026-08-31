@@ -4,79 +4,47 @@
   "derivedFromPerks": "d457707a",
   "cardColors": {
     "title-background": {
+      "h": 26,
+      "s": 57,
+      "l": 43,
+      "a": 0.8
+    },
+    "banners": {
       "h": 304,
       "s": 74,
       "l": 30,
-      "a": 0.85,
-      "gradient": {
-        "angle": 0,
-        "stops": [
-          {
-            "h": 304,
-            "s": 74,
-            "l": 30,
-            "a": 0.85,
-            "position": 0.878168061023622
-          },
-          {
-            "h": 48,
-            "s": 75,
-            "l": 50,
-            "a": 0.65,
-            "position": 1
-          }
-        ]
-      }
-    },
-    "banners": {
-      "h": 244,
-      "s": 75,
-      "l": 33,
-      "a": 0.5
+      "a": 0.75
     },
     "background": {
-      "h": 202,
-      "s": 85,
-      "l": 29,
+      "h": 196,
+      "s": 100,
+      "l": 25,
+      "a": 1
+    },
+    "lines": {
+      "h": 304,
+      "s": 74,
+      "l": 30,
+      "a": 0.85
+    },
+    "class-icon": {
+      "h": 26,
+      "s": 57,
+      "l": 43,
       "a": 1
     }
   },
   "cardBackColors": {
-    "class-icon": {
+    "banners": {
       "h": 304,
       "s": 74,
       "l": 30,
-      "a": 0.85,
-      "gradient": {
-        "angle": 330,
-        "stops": [
-          {
-            "h": 304,
-            "s": 74,
-            "l": 30,
-            "a": 0.85,
-            "position": 0
-          },
-          {
-            "h": 48,
-            "s": 75,
-            "l": 50,
-            "a": 1,
-            "position": 0.899
-          }
-        ]
-      }
-    },
-    "banners": {
-      "h": 244,
-      "s": 75,
-      "l": 33,
-      "a": 0.5
+      "a": 0.75
     },
     "background": {
-      "h": 202,
-      "s": 85,
-      "l": 29,
+      "h": 196,
+      "s": 100,
+      "l": 25,
       "a": 1
     }
   },
@@ -176,6 +144,6 @@
   ],
   "edition": "gh2e",
   "cardEdition": "gh2e",
-  "cardColorsLinked": true,
+  "cardColorsLinked": false,
   "perks": "- perk: Remove one %amd-minus-2% card\n- perk: Replace one %amd-minus-1% card with%lf% one %amd-plus-0%%poison% card\n  checks: 3\n- perk: Replace two %amd-plus-0% cards with%lf%one %amd-plus-1% \"Add +1 %attack% if you used%lf% a %arsenal% item this turn\" card\n  checks: 2\n- perk: Replace one %amd-plus-0% card with%lf% one %amd-plus-2%  card\n  checks: 2\n- perk: Replace three %amd-plus-1% cards with %lf%three %amd-plus-1%  \"Add +1 %attack% for each negative condition the%lf% target has\" cards\n- perk: Replace one %amd-plus-1% card with%lf% one %amd-plus-0% \" %recover% one of your %lf%%arsenal% items\" card\n  checks: 2\n# - perk: Add one %amd-plus-3% card\n- perk: Add two %amd-plus-1%%rolling% cards\n  checks: 2\n- perk: Ignore scenario effects and %lf%add one %amd-plus-1%%rolling% card\n- perk: You may bring two %equip-body% items %lf%to each scenario if at least%lf% one of them has \"Cloak\",%lf% \"Robe\" or \"Cape\" in its name\n- perk: Once each scenario, one %lf%adjacent ally may use one of%lf% your %arsenal% items during their%lf% turn without it becoming %lost%\n- perk2: During a long rest, you may %recover% one of your %arsenal% items\n\n"
 }
