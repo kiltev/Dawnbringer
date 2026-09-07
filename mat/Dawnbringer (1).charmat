@@ -1,0 +1,547 @@
+{
+  "kind": "haven-mat-project",
+  "fileVersion": 1,
+  "templateId": "gh2e",
+  "snapshotVersion": 2,
+  "snapshot": {
+    "name": "Dawnbringer",
+    "state": {
+      "variantFeatures": {
+        "extraBar": false,
+        "multiHand": false,
+        "tokens": true
+      },
+      "colorOverrides": {
+        "background": {
+          "h": 196,
+          "s": 100,
+          "l": 25,
+          "a": 1
+        },
+        "lines": {
+          "h": 304,
+          "s": 74,
+          "l": 30,
+          "a": 0.75
+        },
+        "decorations": {
+          "h": 304,
+          "s": 74,
+          "l": 30,
+          "a": 0.75
+        },
+        "gem": {
+          "h": 26,
+          "s": 57,
+          "l": 43,
+          "a": 1
+        },
+        "colored-text": {
+          "h": 33,
+          "s": 100,
+          "l": 78,
+          "a": 1
+        },
+        "traits": {
+          "h": 33,
+          "s": 100,
+          "l": 78,
+          "a": 1
+        },
+        "banners": {
+          "h": 26,
+          "s": 57,
+          "l": 43
+        },
+        "banners-top": {
+          "h": 26,
+          "s": 57,
+          "l": 43,
+          "a": 0.8
+        },
+        "banners-left": {
+          "h": 26,
+          "s": 57,
+          "l": 43,
+          "gradient": {
+            "angle": 180,
+            "stops": [
+              {
+                "h": 26,
+                "s": 57,
+                "l": 43,
+                "a": 0.85,
+                "position": 0
+              },
+              {
+                "h": 304,
+                "s": 74,
+                "l": 30,
+                "position": 0.5015686515748031
+              }
+            ]
+          },
+          "a": 0.85
+        },
+        "banners-right": {
+          "h": 26,
+          "s": 57,
+          "l": 43,
+          "gradient": {
+            "angle": 180,
+            "stops": [
+              {
+                "h": 26,
+                "s": 57,
+                "l": 43,
+                "a": 0.85,
+                "position": 0
+              },
+              {
+                "h": 304,
+                "s": 74,
+                "l": 30,
+                "a": 1,
+                "position": 0.5011380413385826
+              }
+            ]
+          },
+          "a": 0.85
+        },
+        "banners-bottom": {
+          "h": 26,
+          "s": 57,
+          "l": 43
+        },
+        "resource-banner": {
+          "h": 26,
+          "s": 57,
+          "l": 43
+        }
+      },
+      "colorOverridesByEdition": {
+        "et": {
+          "background": {
+            "h": 196,
+            "s": 100,
+            "l": 25,
+            "a": 1
+          },
+          "lines": {
+            "h": 304,
+            "s": 74,
+            "l": 30,
+            "a": 0.85
+          },
+          "decorations": {
+            "h": 304,
+            "s": 74,
+            "l": 30,
+            "a": 0.75
+          },
+          "gem": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "a": 1
+          },
+          "colored-text": {
+            "h": 33,
+            "s": 100,
+            "l": 78,
+            "a": 1
+          },
+          "traits": {
+            "h": 33,
+            "s": 100,
+            "l": 78,
+            "a": 1
+          },
+          "banners": {
+            "h": 26,
+            "s": 57,
+            "l": 43
+          },
+          "banners-top": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "a": 0.8
+          },
+          "banners-left": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "gradient": {
+              "angle": 180,
+              "stops": [
+                {
+                  "h": 26,
+                  "s": 57,
+                  "l": 43,
+                  "a": 0.85,
+                  "position": 0
+                },
+                {
+                  "h": 304,
+                  "s": 74,
+                  "l": 30,
+                  "position": 0.5015686515748031
+                }
+              ]
+            },
+            "a": 0.85
+          },
+          "banners-right": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "gradient": {
+              "angle": 180,
+              "stops": [
+                {
+                  "h": 26,
+                  "s": 57,
+                  "l": 43,
+                  "a": 0.85,
+                  "position": 0
+                },
+                {
+                  "h": 304,
+                  "s": 74,
+                  "l": 30,
+                  "a": 1,
+                  "position": 0.5011380413385826
+                }
+              ]
+            },
+            "a": 0.85
+          },
+          "banners-bottom": {
+            "h": 26,
+            "s": 57,
+            "l": 43
+          }
+        },
+        "fh": {
+          "background": {
+            "h": 196,
+            "s": 100,
+            "l": 25,
+            "a": 1
+          },
+          "frame": {
+            "h": 0,
+            "s": 0,
+            "l": 59,
+            "a": 0
+          },
+          "lines": {
+            "h": 304,
+            "s": 74,
+            "l": 30,
+            "a": 0.85
+          },
+          "decorations": {
+            "h": 304,
+            "s": 74,
+            "l": 30,
+            "a": 0.75
+          },
+          "gem": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "a": 1
+          },
+          "colored-text": {
+            "h": 33,
+            "s": 100,
+            "l": 78,
+            "a": 1
+          },
+          "traits": {
+            "h": 33,
+            "s": 100,
+            "l": 78,
+            "a": 1
+          },
+          "banners": {
+            "h": 26,
+            "s": 57,
+            "l": 43
+          },
+          "banners-top": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "a": 0.8
+          },
+          "banners-left": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "gradient": {
+              "angle": 180,
+              "stops": [
+                {
+                  "h": 26,
+                  "s": 57,
+                  "l": 43,
+                  "a": 0.85,
+                  "position": 0
+                },
+                {
+                  "h": 304,
+                  "s": 74,
+                  "l": 30,
+                  "position": 0.5015686515748031
+                }
+              ]
+            },
+            "a": 0.85
+          },
+          "banners-right": {
+            "h": 26,
+            "s": 57,
+            "l": 43,
+            "gradient": {
+              "angle": 180,
+              "stops": [
+                {
+                  "h": 26,
+                  "s": 57,
+                  "l": 43,
+                  "a": 0.85,
+                  "position": 0
+                },
+                {
+                  "h": 304,
+                  "s": 74,
+                  "l": 30,
+                  "a": 1,
+                  "position": 0.5011380413385826
+                }
+              ]
+            },
+            "a": 0.85
+          },
+          "banners-bottom": {
+            "h": 26,
+            "s": 57,
+            "l": 43
+          }
+        }
+      },
+      "textOverrides": {
+        "frame.name": "Dawnbringer",
+        "bg.hand-size": "10",
+        "content.notes": "- custom: \"Years of facing the horrors of the dark nights have taught you a vital lesson; preparation is the key to survival. At the start of each scenario, choose exactly %i%one%ie% item from %i%each%ie% of the three categories available exclusively to you:  %p_color:#ffcd8f%Ammo %ammo%, Utility %utility%%p%, and %p_color:#ffcd8f%Thrown %thrown%%p%. They become immediately available to you at the start of the scenario.\"\n- custom: \"Your %p_color:#ffcd8f%Arsenal %arsenal%%p% items do not count towards any standard item slots and do not prevent you from bringing any other items. Note that you are significantly weakened without your tools, spend them wisely.\"\n- divider: \n  # margin: 10px\n- custom: You have abilities that allow you to restore your items once used. Abilities may call for you to %recover% either a specific category ( %p_color:#ffcd8f%%ammo%%p%, %p_color:#ffcd8f%%utility%%p% , %p_color:#ffcd8f%%thrown%%p% ) item or any %p_color:#ffcd8f%%arsenal%%p% item(s) of your choice.\n- divider:\n  # margin: 10px\n- custom: Some abilities let you give an ally an item to use. Whenever they use the item, move the item to your %nbsp1%%lost%%nbsp1% pile unless instructed otherwise."
+      },
+      "assetOverrides": {
+        "frame.icon": {
+          "assetUrl": "",
+          "position": {
+            "x": -2,
+            "y": 0
+          },
+          "scale": 1.25,
+          "rotation": 0,
+          "sourceUrl": "https://i.imgur.com/0q7D5oK.png"
+        },
+        "bg.portrait": {
+          "assetUrl": "",
+          "position": {
+            "x": -332,
+            "y": 100
+          },
+          "scale": 0.83,
+          "rotation": 0,
+          "sourceUrl": "https://i.imgur.com/x72WJLC.jpeg"
+        }
+      },
+      "hpTrack": {
+        "preset": "low"
+      },
+      "traits": [
+        "Educated",
+        "Nimble",
+        "Resourceful"
+      ],
+      "rulesReferences": [
+        {
+          "title": "Items",
+          "page": "33"
+        },
+        {
+          "title": "Forced Movement",
+          "page": "30"
+        },
+        {
+          "title": "Commanding Figures",
+          "page": "31"
+        },
+        {
+          "title": "Recover",
+          "page": "31"
+        }
+      ],
+      "iconLegendShow": {
+        "jump": true,
+        "flying": true,
+        "teleport": true
+      },
+      "bleedEnabled": false,
+      "advancedColors": true,
+      "advancedTraits": false,
+      "customIcons": [
+        {
+          "id": "730b4994-4dbf-4b81-a606-be4090225dc2",
+          "name": "ammo",
+          "sourceUrl": "https://i.imgur.com/3KOzKFY.png",
+          "imageUrl": "",
+          "scale": 1.1,
+          "conditionMode": true,
+          "inlineScale": 1.6,
+          "offsetX": 0,
+          "offsetY": -0.1
+        },
+        {
+          "id": "abfa2301-8ff4-42c4-a0a9-fdf2cc5c0bc2",
+          "name": "utility",
+          "sourceUrl": "https://i.imgur.com/YCNZFoo.png",
+          "imageUrl": "",
+          "scale": 1,
+          "conditionMode": false,
+          "inlineScale": 0.94,
+          "offsetX": -0.03,
+          "offsetY": 0,
+          "kerning": 0.01
+        },
+        {
+          "id": "15cd7a64-3fd8-42e1-907e-17b87268e44a",
+          "name": "thrown",
+          "sourceUrl": "https://i.imgur.com/PkeOkSI.png",
+          "imageUrl": "",
+          "scale": 1.06,
+          "conditionMode": false,
+          "inlineScale": 0.95,
+          "offsetY": 0
+        },
+        {
+          "id": "2395a16e-33aa-4cfc-98a6-6e6d73986ab1",
+          "name": "arsenal",
+          "sourceUrl": "https://i.imgur.com/qH1nPRU.png",
+          "imageUrl": "",
+          "scale": 1.15,
+          "conditionMode": false,
+          "inlineScale": 1.35,
+          "offsetX": -0.04,
+          "offsetY": 0,
+          "kerning": 0
+        }
+      ],
+      "resourceTracker": {
+        "enabled": false,
+        "maxResources": 5,
+        "advancedPositioning": false,
+        "slotOffsetsY": []
+      },
+      "extraBar": {
+        "secondBar": "off",
+        "summonStats": false,
+        "damageConditions": false,
+        "barTrack": {
+          "preset": "mid"
+        }
+      }
+    },
+    "back": {
+      "bleedEnabled": false,
+      "originMode": "builtin",
+      "originKey": "Human",
+      "customOriginText": "Human",
+      "customDescription": "\n\nThe few who outlasted the initial raids learned that survival required more than a high wall. Calling themselves Dawnbringers, these solitary mercenaries became the thin defense line between the settlement and the dark. Relying on cold iron, crude alchemy, and hand-crossbows, they view hunting not as a heroic adventure, but as a slow-burning retribution. They slip into the woods at night to dismantle threats before they ever reach the town gates, trading their blood and sanity for the promise of a quiet sunrise.",
+      "retirementText": "N/A",
+      "complexity": 3,
+      "classStats": {
+        "melee": 3,
+        "ranged": 5,
+        "mobility": 3,
+        "support": 1,
+        "defense": 0,
+        "control": 4
+      },
+      "elementalAffinities": [],
+      "colorOverrides": {
+        "class-icon": {
+          "h": 26,
+          "s": 57,
+          "l": 43,
+          "a": 1
+        },
+        "banners": {
+          "h": 0,
+          "s": 0,
+          "l": 50,
+          "a": 0.8,
+          "gradient": {
+            "angle": 0,
+            "stops": [
+              {
+                "h": 304,
+                "s": 74,
+                "l": 30,
+                "a": 0.85,
+                "position": 0.102
+              },
+              {
+                "h": 48,
+                "s": 75,
+                "l": 50,
+                "a": 1,
+                "position": 0.899
+              }
+            ]
+          }
+        },
+        "banners-top": {
+          "h": 26,
+          "s": 57,
+          "l": 43,
+          "a": 0.8
+        },
+        "decorations": {
+          "h": 304,
+          "s": 74,
+          "l": 30,
+          "a": 0.75
+        },
+        "colored-text": {
+          "h": 33,
+          "s": 100,
+          "l": 78,
+          "a": 1
+        },
+        "lines": {
+          "h": 304,
+          "s": 74,
+          "l": 30,
+          "a": 0.85
+        },
+        "background": {
+          "h": 196,
+          "s": 100,
+          "l": 25
+        }
+      },
+      "portraitTransform": {
+        "x": -760,
+        "y": -123,
+        "scale": 2.22
+      },
+      "classDescription": "As human expansion disturbs ancient horrors across the continent, high walls are rarely enough to keep the dark at bay. Calling themselves Dawnbringers, these solitary mercenaries serve as a ruthless line of defense against the threats their own people provoke. Relying on cold iron, crude alchemy, and hand-crossbows, they view hunting not as a heroic calling, but as a slow-burning retribution. They slip into the night to dismantle monsters before they ever reach the city gates, trading their blood and sanity for the promise of a quiet sunrise.",
+      "advancedColors": true
+    }
+  }
+}
