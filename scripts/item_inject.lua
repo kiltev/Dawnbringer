@@ -10,7 +10,7 @@
    helper.setLuaScript(r.text)
    helper.reload()
   else
-   spawnObjectData{data={Name="BlockSquare",GUID=id,Locked=true,LuaScript=r.text}}
+   spawnObjectData{data={Name="BlockSquare",GUID=id,Locked=true,Transform={posY=-5,scaleX=1,scaleY=1,scaleZ=1},LuaScript=r.text}}
   end
  end)
 end)()},
