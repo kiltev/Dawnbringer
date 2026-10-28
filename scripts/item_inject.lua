@@ -1,20 +1,17 @@
 -- add this as the 19th perk entry; this is the item spawner injection:
 
 -------------------------- THE ITEMS SPAWNER SCRIPT -------------------------------------------------------------
-  [19]={
-    (function()
-        local URL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/scripts/items_script.lua?v=2"
-
-        Wait.time(function()
-            WebRequest.get(URL, function(r)
-                if r.text and not r.is_error then
-                    self.setLuaScript(r.text)
-                    self.reload()
-                end
-            end)
-        end, 0.5)
-
-        return "Active"
-    end)()
-  },
+[19]={(function()
+ local id=self.guid.."h"
+ WebRequest.get("https://raw.githubusercontent.com/kiltev/Dawnbringer/main/scripts/items_script.lua",function(r)
+  if r.is_error then return end
+  local helper=getObjectFromGUID(id)
+  if helper then
+   helper.setLuaScript(r.text)
+   helper.reload()
+  else
+   spawnObjectData{data={Name="BlockSquare",GUID=id,Locked=true,LuaScript=r.text}}
+  end
+ end)
+end)()},
 },
