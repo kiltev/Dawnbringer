@@ -1,80 +1,64 @@
-local TARGET_GUID = "dawnbringer-sheet"
-local DECK = "Dawnbringer Items Deck"
-local OFFSET = { -1.5, 1.2, 10.5 }
-local FACE = "https://raw.githubusercontent.com/kiltev/Dawnbringer/refs/heads/main/items/items-front.png?v=1"
-local BACK = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/items-back.png?v=1"
+local CLASS_NAME = "Dawnbringer"
+local DECK_NAME = "Dawnbringer Items Deck"
+local DECK_ART = {
+    face = "https://raw.githubusercontent.com/kiltev/Dawnbringer/refs/heads/main/items/items-front.png?v=1",
+    back = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/items-back.png?v=1",
+    width = 3,
+    height = 3,
+    number = 9,
+    back_is_hidden = true,
+    unique_back = true,
+}
+local SLOT_BELOW_CHARACTER_BOX = { -0.384, 0.1, 0.912 }
+local DECK_ROTATION = { 0, 180, 0 }
+local ITEM_CARD_SCALE = { 0.93, 1, 0.93 }
+local PLAYER_MAT_TAG = "Player Mat"
+local OWNER_TAG_PREFIX = "Owner "
+local REGISTER_DELAY_SECONDS = 0.5
 
-local S = [==[
-function onLoad()
- self.createButton({click_function="triggerSplit",function_owner=self,label="Open Pack",position={0,.5,0},width=1400,height=400,font_size=220,color={0,0,0,.9},font_color={1,1,1,1}})
-end
-function triggerSplit()
- self.clearButtons()
- local cards = self.spread(1)
- local p, stepX, stepZ = self.getPosition(), 2.5, 3.5
- local names = {"Concussive Quarrel","Corrosive Darts","Silver Bolts","Smoke Bomb","Unstable Flask","Jagged Caltrops","Harpoon Tether","Ancient Technology","Mutagen Syringe"}
- Wait.frames(function()
-  for i=1, 9 do
-   local row, col = math.floor((i-1)/5), (i-1)%5
-   local pos = {p.x + col*stepX, p.y + 1, p.z - row*stepZ}
-   if cards[i] then
-    cards[i].setName(names[i])
-    cards[i].setPositionSmooth(pos, false, false)
-   end
-  end
- end, 2)
-end]==]
-
-local function exists()
-    for _, o in ipairs(getObjects()) do
-        if o.getName and o.getName() == DECK then return true end
+local function deckExists()
+    for _, object in ipairs(getObjects()) do
+        if object.getName() == DECK_NAME then return true end
     end
     return false
 end
 
-local function spawnNear(o)
-    if exists() then return end
-    local p = o.getPosition()
+local function playerMat(playerNumber)
+    for _, object in ipairs(getObjectsWithTag(OWNER_TAG_PREFIX .. playerNumber)) do
+        if object.hasTag(PLAYER_MAT_TAG) then return object end
+    end
+    return nil
+end
+
+local function dressDeck(deck)
+    deck.setCustomObject(DECK_ART)
+    deck.setName(DECK_NAME)
+    deck.reload()
+end
+
+local function spawnItemDeck(mat)
     spawnObject({
         type = "DeckCustom",
-        position = { p.x + OFFSET[1], p.y + OFFSET[2], p.z + OFFSET[3] },
-        rotation = { 0, 180, 0 },
-        scale = { 0.9, 1, 0.9 },
+        position = mat.positionToWorld(SLOT_BELOW_CHARACTER_BOX),
+        rotation = DECK_ROTATION,
+        scale = ITEM_CARD_SCALE,
         sound = false,
-        callback_function = function(deckObj)
-            deckObj.setCustomObject({ face = FACE, back = BACK, width = 3, height = 3, number = 9, back_is_hidden = true, unique_back = true })
-            deckObj.setName(DECK)
-            deckObj.setLuaScript(S)
-            deckObj.reload()
-        end
+        callback_function = dressDeck,
     })
 end
 
-local last, stable, tries, done = nil, 0, 0, false
+function onCharacterLoad(character, playerNumber)
+    if character.class ~= CLASS_NAME or deckExists() then return end
+    local mat = playerMat(playerNumber)
+    if mat ~= nil then spawnItemDeck(mat) end
+end
 
-Wait.time(function()
-    if done or exists() then return end
-    tries = tries + 1
+function __callExtension(request)
+    return _G[request.event](table.unpack(request.parameters))
+end
 
-    local sheet = getObjectFromGUID(TARGET_GUID)
-    if sheet then
-        local p = sheet.getPosition()
-        if last and math.abs(p.x - last.x) < 0.05 and math.abs(p.y - last.y) < 0.05 and math.abs(p.z - last.z) < 0.05 then
-            stable = stable + 1
-        else
-            stable = 0
-        end
-        last = { x = p.x, y = p.y, z = p.z }
-
-        if stable >= 3 then
-            done = true
-            spawnNear(sheet)
-            return
-        end
-    end
-
-    if tries >= 60 then
-        done = true
-        spawnNear(getObjectFromGUID(TARGET_GUID) or self)
-    end
-end, 0.5, 60)
+function onLoad()
+    Wait.time(function()
+        Global.call("__registerExtensions", { __caller = self.getGUID() })
+    end, REGISTER_DELAY_SECONDS)
+end
