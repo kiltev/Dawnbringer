@@ -1,7 +1,7 @@
 local CLASS_NAME = "Dawnbringer"
 local DECK_NAME = "Dawnbringer Items Deck"
 local DECK_ART = {
-    face = "https://raw.githubusercontent.com/kiltev/Dawnbringer/refs/heads/main/items/items-front.png?v=1",
+    face = "https://raw.githubusercontent.com/kiltev/Dawnbringer/refs/heads/main/items/items-front.png?v=2",
     back = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/items-back.png?v=1",
     width = 3,
     height = 3,
