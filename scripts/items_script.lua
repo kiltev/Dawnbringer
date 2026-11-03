@@ -37,8 +37,8 @@ local SOLO_ITEM_NAME = "Dawnbringer Solo Scenario Item"
 local SOLO_ITEM_CARD_ID = 100
 local SOLO_ITEM_ART = {
     ["1"] = {
-        FaceURL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/solo/solo-front.png?v=2",
-        BackURL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/solo/solo-back.png?v=2",
+        FaceURL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/solo/solo-front.png?v=3",
+        BackURL = "https://raw.githubusercontent.com/kiltev/Dawnbringer/main/items/solo/solo-back.png?v=3",
         NumWidth = 1,
         NumHeight = 1,
         BackIsHidden = true,
@@ -50,9 +50,9 @@ local ITEM_CARD_TRANSFORM = { scaleX = 0.93, scaleY = 1, scaleZ = 0.93 }
 local LOAD_TIMEOUT_SECONDS = 8
 local ITEM_SPREAD_DISTANCE = 0.75
 local SOLO_ITEM_CIRCLES = {
-    { across = 0.1921, down = 0.7570 },
-    { across = 0.4719, down = 0.7577 },
-    { across = 0.7517, down = 0.7570 },
+    { across = 0.1777, down = 0.7804 },
+    { across = 0.4805, down = 0.7797 },
+    { across = 0.7822, down = 0.7797 },
 }
 local IMAGE_CENTER = 0.5
 local SLOT_BELOW_CHARACTER_BOX = { -0.384, 0.1, 0.912 }
