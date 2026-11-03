@@ -47,7 +47,8 @@ local SOLO_ITEM_ART = {
     },
 }
 local ITEM_CARD_TRANSFORM = { scaleX = 0.93, scaleY = 1, scaleZ = 0.93 }
-local SOLO_ITEM_LOAD_TIMEOUT_SECONDS = 8
+local LOAD_TIMEOUT_SECONDS = 8
+local ITEM_SPREAD_DISTANCE = 0.75
 local SOLO_ITEM_CIRCLES = {
     { across = 0.1921, down = 0.7570 },
     { across = 0.4719, down = 0.7577 },
@@ -60,11 +61,34 @@ local PLAYER_MAT_TAG = "Player Mat"
 local OWNER_TAG_PREFIX = "Owner "
 local REGISTER_DELAY_SECONDS = 0.5
 
-local function exists(name)
+local function addDeckCardNames(names, deck)
+    for _, card in ipairs(deck.getObjects()) do
+        names[card.name] = true
+    end
+end
+
+local function namesOnTable()
+    local names = {}
     for _, object in ipairs(getObjects()) do
-        if object.getName() == name then return true end
+        names[object.getName()] = true
+        if object.type == "Deck" then addDeckCardNames(names, object) end
+    end
+    return names
+end
+
+local function isPackOnTable(pack, names)
+    for _, item in ipairs(pack.items) do
+        if names[item.name] then return true end
     end
     return false
+end
+
+local function isLoaded(object)
+    return not object.spawning and not object.loading_custom
+end
+
+local function isSettled(object)
+    return isLoaded(object) and object.resting
 end
 
 local function playerMat(playerNumber)
@@ -109,6 +133,9 @@ local function spawnItemPack(mat, pack)
         data = packDeckData(pack),
         position = mat.positionToWorld(pack.slot),
         rotation = DECK_ROTATION,
+        callback_function = function(deck)
+            Wait.condition(function() deck.spread(ITEM_SPREAD_DISTANCE) end, function() return isSettled(deck) end, LOAD_TIMEOUT_SECONDS)
+        end,
     })
 end
 
@@ -120,10 +147,6 @@ local function soloItemData()
         Transform = ITEM_CARD_TRANSFORM,
         CustomDeck = SOLO_ITEM_ART,
     }
-end
-
-local function isLoaded(card)
-    return not card.spawning and not card.loading_custom
 end
 
 local function snapPointOver(card, circle)
@@ -151,16 +174,17 @@ local function spawnSoloItem(mat)
         position = mat.positionToWorld(SLOT_BELOW_CHARACTER_BOX),
         rotation = DECK_ROTATION,
         callback_function = function(card)
-            Wait.condition(function() addSnapPoints(card) end, function() return isLoaded(card) end, SOLO_ITEM_LOAD_TIMEOUT_SECONDS)
+            Wait.condition(function() addSnapPoints(card) end, function() return isLoaded(card) end, LOAD_TIMEOUT_SECONDS)
         end,
     })
 end
 
 local function spawnMissingItems(mat)
+    local names = namesOnTable()
     for _, pack in ipairs(ITEM_PACKS) do
-        if not exists(pack.name) then spawnItemPack(mat, pack) end
+        if not isPackOnTable(pack, names) then spawnItemPack(mat, pack) end
     end
-    if not exists(SOLO_ITEM_NAME) then spawnSoloItem(mat) end
+    if not names[SOLO_ITEM_NAME] then spawnSoloItem(mat) end
 end
 
 function onCharacterLoad(character, playerNumber)
